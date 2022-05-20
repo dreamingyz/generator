@@ -55,7 +55,7 @@ public class H2CodeGeneratorTest {
      * 全局配置
      */
     private GlobalConfig.Builder globalConfig() {
-        return new GlobalConfig.Builder().fileOverride();
+        return new GlobalConfig.Builder();
     }
 
     /**
