@@ -15,15 +15,15 @@ import java.util.Collections;
 public class YqnGeneratorTest {
 
     public static void main(String[] args) {
-        FastAutoGenerator.create(new DataSourceConfig.Builder("jdbc:mysql://mysql-common.qa-pub.yqn.corp:3306/yqn_composer_v2", "root", "sr@12345"))
+        FastAutoGenerator.create(new DataSourceConfig.Builder("jdbc:mysql://mysql-common.qax-pub.yqn.corp:3306/yqn_composer_v2", "root", "sr@12345"))
             .globalConfig(builder -> builder.author("zhujunming@yunquna.com")
                 .enableSwagger()
-                .outputDir("E://code")
+                .outputDir("C://develop/code")
                 .dateType(DateType.ONLY_DATE))
             .packageConfig(builder -> builder.parent("com.yqn.framework.composer.console")
                 .entity("dao.domain")
                 .mapper("dao.mapper")
-                .pathInfo(Collections.singletonMap(OutputFile.xml, "E://code/mapper")))
+                .pathInfo(Collections.singletonMap(OutputFile.xml, "C://develop/code/mapper")))
             .strategyConfig(builder -> builder.addInclude("composer_helper_doc")
                 .entityBuilder()
                 .enableLombok())
